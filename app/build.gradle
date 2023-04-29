@@ -8,7 +8,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.jetpack_library"
+        applicationId 'com.joshua.jetpack_library'
         minSdk 21
         targetSdk 32
         versionCode 1

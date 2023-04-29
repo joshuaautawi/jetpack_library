@@ -36,6 +36,7 @@ class MainActivity : ComponentActivity() {
                             body = "Tsiafsdfasdfadfadfadfadf" + "Asdasdasdasdasdads",
                             bodyFontWeight = FontWeight.Light
                         )
+                        TextCustom(value = "Text Biasa")
                     }
                 }
 
