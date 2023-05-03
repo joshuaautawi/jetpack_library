@@ -37,15 +37,11 @@ fun CardExpandable(
     titleFontWeight: FontWeight = FontWeight.Bold,
     bodyFontSize: TextUnit = 20.sp,
     bodyFontWeight: FontWeight = FontWeight.Bold,
-
-
     ) {
     var isExpandable by remember {
         mutableStateOf(defaultIsExpandable)
     }
     val rotationState by animateFloatAsState(targetValue = if (isExpandable) 180f else 0f)
-
-
 
     Card(
         modifier = Modifier
