@@ -36,6 +36,7 @@ fun TextFieldCommon(
     readOnly: Boolean = false,
     keyboardType: KeyboardType = KeyboardType.Text,
     imeAction: ImeAction = ImeAction.Send,
+    maxChar: Int = 10,
 ) {
     var input by remember {
         mutableStateOf(TextFieldValue())
@@ -51,8 +52,10 @@ fun TextFieldCommon(
             cursorColor = textColor,
             textColor = textColor
         ),
-        onValueChange = { newText ->
-            input = newText
+        onValueChange = {
+            if (maxChar >= it.text.length) {
+                input = it
+            }
         },
         placeholder = { Text(placeholder) },
         modifier = Modifier.padding(10.dp),
